@@ -19,6 +19,8 @@
             <span class="fw-semibold text-secondary">Voto:</span>
             <span class="badge bg-primary">{{ $song->vote }}</span>
         </p>
+
+        <a href="{{ route('songs.show', $song) }}" class="btn btn-primary mt-3">Dettagli</a>
     </div>
 </div>
 
