@@ -1,0 +1,16 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        160deg,
+        rgb(15, 23, 42),
+        rgb(30, 58, 138),
+        rgb(124, 58, 237),
+        rgb(236, 72, 153)
+    );
+    background-attachment: fixed;
+}
+
+.card-image {
+    height: 250px;
+    object-fit: cover;
+}
