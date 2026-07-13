@@ -17,7 +17,7 @@ class SongsController extends Controller
 
     }
 
-    public function add (SongRequest $request) {
+    public function store (SongRequest $request) {
 
         // dd($request->all());
 
@@ -47,7 +47,7 @@ class SongsController extends Controller
 
         $song->save();
 
-        return redirect()->route('song.index')->with('status', 'Canzone correttamente aggiunta');
+        return redirect()->route('songs.index')->with('status', 'Canzone correttamente aggiunta');
 
     }
 

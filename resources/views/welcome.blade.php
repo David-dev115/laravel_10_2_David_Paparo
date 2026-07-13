@@ -9,7 +9,7 @@
                 <h1 class="text-white mb-4">Jukebox</h1>
 
                 <div class="d-flex justify-content-center gap-3">
-                    <a href="{{route('song.index')}}" class="btn btn-primary">Catalogo</a>
+                    <a href="{{route('songs.index')}}" class="btn btn-primary">Catalogo</a>
                     <a href="{{route('songs.create')}}" class="btn btn-light">Aggiungi</a>
                 </div>
             </div>

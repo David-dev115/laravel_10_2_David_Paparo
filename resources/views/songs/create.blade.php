@@ -24,7 +24,7 @@
 
                 <div class="card shadow p-4">
 
-                    <form method="POST" action="{{route('add.song')}}" enctype="multipart/form-data">
+                    <form method="POST" action="{{route('songs.store')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="name" class="form-label">Nome</label>

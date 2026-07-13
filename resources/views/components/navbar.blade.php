@@ -14,7 +14,7 @@
                     <a class="nav-link" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('song.index')}}">Catalogo</a>
+                    <a class="nav-link" href="{{route('songs.index')}}">Catalogo</a>
                 </li>
 
 
@@ -30,7 +30,7 @@
 
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('store.song')}}">Aggiungi</a>
+                    <a class="nav-link" href="{{route('songs.create')}}">Aggiungi</a>
                 </li>
                 @endauth
 
