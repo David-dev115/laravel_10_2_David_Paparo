@@ -64,6 +64,12 @@ class SongsController extends Controller
     return view('songs.show', compact('song'));
     }
 
+    public function edit ( Song $song  ) {
+
+    return view ('songs.edit' , compact('song') );
+
+    }
+
 }
 
 

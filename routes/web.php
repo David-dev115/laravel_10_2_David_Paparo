@@ -19,4 +19,5 @@ Route::get('/songs'  , [SongsController::class , 'index'] )->name('songs.index')
 
 Route::get('/songs/{song}', [SongsController::class, 'show'])->name('songs.show');
 
+Route::get('/songs/{song}/edit' , [SongsController::class, 'edit'] )->name('songs.edit');
 
