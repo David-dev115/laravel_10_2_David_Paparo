@@ -48,6 +48,7 @@
                         </div>
 
                         <div class="mb-3">
+                            <img src="{{ Storage::url($song->img) }}" class="img-fluid mb-3">
                             <label for="img" class="form-label">Inserisci immagine</label>
                             <input name="img" type="file" class="form-control" id="img">
                         </div>

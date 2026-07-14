@@ -70,6 +70,22 @@ class SongsController extends Controller
 
     }
 
+
+    public function update(Request $request, Song $song){
+    $dati = [
+        'name'   => $request->input('name'),
+        'artist' => $request->input('artist'),
+        'album'  => $request->input('album'),
+        'vote'   => $request->input('vote'),
+    ];
+
+    if ($request->file('img')) {
+        $dati['img'] = $request->file('img')->store('img', 'public');
+    }
+
+    $song->update($dati);
+
+    return redirect()->route('songs.show', $song)->with('status', 'Canzone correttamente modificata');
 }
 
-
+}

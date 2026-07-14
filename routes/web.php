@@ -21,3 +21,5 @@ Route::get('/songs/{song}', [SongsController::class, 'show'])->name('songs.show'
 
 Route::get('/songs/{song}/edit' , [SongsController::class, 'edit'] )->name('songs.edit');
 
+
+Route::put('/songs/{song}', [SongsController::class, 'update']) ->name('songs.update');
