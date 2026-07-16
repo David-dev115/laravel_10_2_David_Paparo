@@ -22,4 +22,33 @@
 
         {{-- <a href="{{ route('songs.show', $song) }}" class="btn btn-primary mt-3">Dettagli</a> --}}
     </div>
+    {{--
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <button type="button" class="btn btn-primary">Modifica</button>
+                <button type="button" class="btn btn-secondary">Elimina</button>
+                <button type="button" class="btn btn-success">Catalogo</button>
+
+            </div>
+
+        </div>
+
+    </div> --}}
+
+    <div class="text-center mb-3">
+
+        <a href="{{route('songs.edit', $song)}}" class="btn btn-primary">Modifica</a>
+
+            <a href="{{ route('songs.index') }}" class="btn btn-success">Catalogo</a>
+    </div>
+
+
+
+
 </div>
+
+

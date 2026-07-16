@@ -47,9 +47,9 @@
                             <input name="vote" type="number" class="form-control" id="vote" value="{{ old('vote' , $song->vote )   }}" >
                         </div>
 
-                        <div class="mb-3">
-                            <img src="{{ Storage::url($song->img) }}" class="img-fluid mb-3">
-                            <label for="img" class="form-label">Inserisci immagine</label>
+                        <div class="mb-3 text-center">
+                            <img src="{{ Storage::url($song->img) }}" class="img-fluid mb-3 d-block mx-auto">
+                            <label for="img" class="form-label">Inserisci nuova immagine</label>
                             <input name="img" type="file" class="form-control" id="img">
                         </div>
 

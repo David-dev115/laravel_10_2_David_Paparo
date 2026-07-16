@@ -10,12 +10,9 @@ Route::get('/', [PublicController::class , 'home'] )->name('home');
 
 Route::get('/songs/create'  , [SongsController::class , 'create'] )->name('songs.create')->middleware('auth');
 
-
 Route::post('/songs' , [SongsController::class , 'store'] )->name('songs.store')->middleware('auth');
 
-
 Route::get('/songs'  , [SongsController::class , 'index'] )->name('songs.index');
-
 
 Route::get('/songs/{song}', [SongsController::class, 'show'])->name('songs.show');
 
