@@ -88,4 +88,12 @@ class SongsController extends Controller
     return redirect()->route('songs.show', $song)->with('status', 'Canzone correttamente modificata');
 }
 
+
+    public function destroy (Song $song) {
+
+        $song->delete();
+
+        return redirect()->route('songs.index')->with('status', 'Canzone correttamente eliminata');
+    }
+
 }

@@ -20,30 +20,25 @@
             <span class="badge bg-primary">{{ $song->vote }}</span>
         </p>
 
-        {{-- <a href="{{ route('songs.show', $song) }}" class="btn btn-primary mt-3">Dettagli</a> --}}
+
     </div>
-    {{--
-    <div class="container">
 
-        <div class="row">
 
-            <div class="col-12">
-
-                <button type="button" class="btn btn-primary">Modifica</button>
-                <button type="button" class="btn btn-secondary">Elimina</button>
-                <button type="button" class="btn btn-success">Catalogo</button>
-
-            </div>
-
-        </div>
-
-    </div> --}}
-
-    <div class="text-center mb-3">
+    <div class="text-center mb-3 d-flex justify-content-center">
 
         <a href="{{route('songs.edit', $song)}}" class="btn btn-primary">Modifica</a>
 
-            <a href="{{ route('songs.index') }}" class="btn btn-success">Catalogo</a>
+        <a href="{{ route('songs.index') }}" class="btn btn-success mx-4">Catalogo</a>
+
+        <form method="POST" action="{{route('songs.destroy' , $song )}}" >
+            @method('DELETE')
+            @csrf
+
+            <button type="submit" class="btn btn-secondary">
+                Elimina
+            </button>
+        </form>
+
     </div>
 
 
