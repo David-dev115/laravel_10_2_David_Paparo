@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Song;
 use App\Http\Requests\SongRequest;
+use Illuminate\Support\Facades\Auth;
 
 class SongsController extends Controller
 {
@@ -44,8 +45,11 @@ class SongsController extends Controller
         $song->vote = $vote;
         $song->img = $img;
 
+        $song->user_id = Auth::id();
+
 
         $song->save();
+
 
         return redirect()->route('songs.index')->with('status', 'Canzone correttamente aggiunta');
 
