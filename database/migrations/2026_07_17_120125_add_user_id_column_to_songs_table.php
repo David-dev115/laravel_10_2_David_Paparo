@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::table('songs', function (Blueprint $table) {
 
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->unsignedBigInteger('user_id')->default(1)->after('vote');
+
+            $table->foreign('user_id')->references('id')->on('users');
 
         });
     }

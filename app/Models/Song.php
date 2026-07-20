@@ -14,7 +14,8 @@ class Song extends Model
         'artist',
         'album',
         'vote',
-        'img'
+        'img',
+        'user_id'
 
     ];
 

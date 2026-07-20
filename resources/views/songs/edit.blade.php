@@ -7,7 +7,7 @@
 
             <div class="col-12 col-md-6 col-lg-5">
 
-                <h2 class="text-white mb-4">Modifica canzone</h2>
+                <h2 class="text-white mb-4">Modifica canzone {{$song->name}}</h2>
 
                 {{-- @if ($errors->any())
                 <div class="alert alert-danger">

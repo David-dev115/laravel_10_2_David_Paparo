@@ -20,6 +20,11 @@
             <span class="badge bg-primary">{{ $song->vote }}</span>
         </p>
 
+        <p class="mb-1">
+            <span class="fw-semibold text-secondary">Inserita da:</span>
+            <span>{{ $song->user->name }}</span>
+        </p>
+
         <a href="{{ route('songs.show', $song) }}" class="btn btn-primary mt-3">Dettagli</a>
     </div>
 </div>
