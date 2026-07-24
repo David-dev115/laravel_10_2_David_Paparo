@@ -25,7 +25,19 @@
             <span>{{ $song->user->name }}</span>
         </p>
 
-        <a href="{{ route('songs.show', $song) }}" class="btn btn-primary mt-3">Dettagli</a>
+        @auth
+
+            @if ($song->user_id == Auth::id())
+
+                <a href="{{ route('songs.show', $song) }}" class="btn btn-primary mt-3">Dettagli</a>
+
+
+            @endif
+
+        @endauth
+
+
+
     </div>
 </div>
 

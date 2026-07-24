@@ -76,6 +76,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">{{Auth::user()->name}}</a>
                         </li>
+
+                        <li>
+                            <a class="nav-link" href="{{'user.profile'}}">Area riservata</a>
+                        </li>
+
                         <li class="nav-item">
                             <form class="" action="{{route('logout')}}" method="POST">
                                 @csrf

@@ -23,6 +23,9 @@
 
     </div>
 
+    @auth
+
+    @if ($song->user_id == Auth::id())
 
     <div class="text-center mb-3 d-flex justify-content-center">
 
@@ -40,6 +43,23 @@
         </form>
 
     </div>
+
+        @else
+
+        <div class="text-center mb-3">
+            <a href="{{ route('songs.index') }}" class="btn btn-success">
+                Catalogo
+            </a>
+        </div>
+
+    @endif
+
+
+
+    @endauth
+
+
+
 
 
 

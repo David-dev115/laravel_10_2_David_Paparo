@@ -70,12 +70,19 @@ class SongsController extends Controller
 
     public function edit ( Song $song  ) {
 
-    return view ('songs.edit' , compact('song') );
+        if ($song->user_id == Auth::user()->id) {
 
+            return view ('songs.edit' , compact('song') );
+        }else{
+            return redirect()->route('home')->with('status', "Operazione consentita solo all'autore");
+        }
     }
 
 
     public function update(Request $request, Song $song){
+
+        if ($song->user_id == Auth::user()->id) {
+
     $dati = [
         'name'   => $request->input('name'),
         'artist' => $request->input('artist'),
@@ -90,14 +97,24 @@ class SongsController extends Controller
     $song->update($dati);
 
     return redirect()->route('songs.show', $song)->with('status', 'Canzone correttamente modificata');
-}
+    } else {
+        return redirect()->route('home')->with('status', "Operazione consentita solo all'autore");
+        }
+    }
+
 
 
     public function destroy (Song $song) {
 
+    if ($song->user_id == Auth::user()->id){
+
         $song->delete();
 
         return redirect()->route('songs.index')->with('status', 'Canzone correttamente eliminata');
+        } else  {
+        return redirect()->route('home')->with('status', "Operazione consentita solo all'autore");
+        }
     }
 
 }
+

@@ -22,3 +22,4 @@ Route::put('/songs/{song}', [SongsController::class, 'update']) ->name('songs.up
 
 Route::delete('/songs/{song}' , [SongsController::class, 'destroy'] )->name('songs.destroy');
 
+Route::get('/user.profile' , [PublicController::class , 'profile'])->name('user.profile');
